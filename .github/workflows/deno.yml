@@ -26,4 +26,4 @@ jobs:
                   server: aguirreteam.projectsutd.online
                   username: u614968815.aguirreteam
                   password: Aguirreteam_2024
-                  local-dir: ./build # Ruta local de la carpeta de build
+                  local-dir: build/
