@@ -27,4 +27,3 @@ jobs:
                   username: u614968815.aguirreteam
                   password: Aguirreteam_2024
                   local-dir: ./build # Ruta local de la carpeta de build
-                  remote-dir: /ruta/en/el/servidor # Ruta remota en el servidor FTP
