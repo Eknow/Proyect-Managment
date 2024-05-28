@@ -3,27 +3,24 @@ name: Deploy to FTP
 on:
     push:
         branches:
-            - master
+            - main
 
 jobs:
     deploy:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Checkout code
+            - name: Checkout repository
               uses: actions/checkout@v2
 
-            - name: Install dependencies and build
-              run: |
-                  npm cache clean --force
-                  npm install --legacy-peer-deps --force
-                  npm install env-cmd --legacy-peer-deps
-                  npm run build
+            - name: Install FTP Deploy
+              run: npm install -g ftp-deploy
 
-            - name: FTP Deploy
-              uses: SamKirkland/FTP-Deploy-Action@4.0.0
-              with:
-                  server: aguirreteam.projectsutd.online
-                  username: u614968815.aguirreteam
-                  password: Aguirreteam_2024
-                  local-dir: build/
+            - name: Install project dependencies
+              run: npm install
+
+            - name: Build project
+              run: npm run build
+
+            - name: Deploy to FTP
+              run: ftp-deploy --host aguirreteam.projectsutd.online --user u614968815.aguirreteam --password Aguirreteam_2024 --local-dir ./build
