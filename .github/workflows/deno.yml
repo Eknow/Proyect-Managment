@@ -18,7 +18,7 @@ jobs:
                   npm cache clean --force
                   npm install --legacy-peer-deps --force
                   npm install env-cmd --legacy-peer-deps
-                  npm run build:production
+                  npm run build
 
             - name: FTP Deploy
               uses: SamKirkland/FTP-Deploy-Action@4.0.0
