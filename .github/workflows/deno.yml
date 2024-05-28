@@ -1,49 +1,49 @@
 name: 🚀 Deploy on Production push version
 
 on:
-    push:
-        branches:
-            -master
+  push:
+    branches:
+      - master
 
 jobs:
-    web-deploy:
-        name: 🎉 Deploy Production
-        runs-on: ubuntu-latest
+  web-deploy:
+    name: 🎉 Deploy Production
+    runs-on: ubuntu-latest
 
-        strategy:
-            matrix:
-                node-version: [18.19.0]
+    strategy:
+      matrix:
+        node-version: [18.19.0]
 
-        steps:
-            - name: Cancel Previous Runs
-              uses: styfle/cancel-workflow-action@0.9.1
-              with:
-                  access_token: ${{ github.token }}
+    steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.1
+        with:
+          access_token: ${{ github.token }}
 
-            - name: 🚚 Get latest code
-              uses: actions/checkout@v3
-              with:
-                  fetch-depth: 0
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
-            - name: Use Node.js ${{ matrix.node-version }}
-              uses: actions/setup-node@v3
-              with:
-                  node-version: ${{ matrix.node-version }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
 
-            - name: 🔨 Build Project
-              run: |
-                  npm cache clean --force
-                  npm install --legacy-peer-deps --force
-                  npm install env-cmd --legacy-peer-deps
-                  npm run build
+      - name: 🔨 Build Project
+        run: |
+          npm cache clean --force
+          npm install --legacy-peer-deps --force
+          npm install env-cmd --legacy-peer-deps
+          npm run build
 
-            - name: List output files
-              run: find build/ -print
+      - name: List output files
+        run: find build/ -print
 
-            - name: 📂 Sync files
-              uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-              with:
-                  server: 'https://aguirreteam.projectsutd.online'
-                  username: 'u614968815.aguirreteam'
-                  password: 'Aguirreteam_2024'
-                  local-dir: build/
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: 'https://aguirreteam.projectsutd.online'
+          username: 'u614968815.aguirreteam'
+          password: 'Aguirreteam_2024'
+          local-dir: build/
