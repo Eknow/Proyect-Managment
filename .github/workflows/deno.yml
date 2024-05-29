@@ -1,26 +1,49 @@
-name: Deploy to FTP
+name: 🚀 Deploy on push main
 
 on:
     push:
         branches:
-            - master
+            - main
 
 jobs:
-    deploy:
+    web-deploy:
+        name: 🎉 Deploy Preprod
         runs-on: ubuntu-latest
 
+        strategy:
+            matrix:
+                node-version: [18.19.0]
+
         steps:
-            - name: Checkout repository
-              uses: actions/checkout@v2
+            - name: Cancel Previous Runs
+              uses: styfle/cancel-workflow-action@0.9.1
+              with:
+                  access_token: ${{ github.token }}
 
-            - name: Install FTP Deploy
-              run: npm install -g ftp-deploy
+            - name: 🚚 Get latest code
+              uses: actions/checkout@v3
+              with:
+                  fetch-depth: 0
 
-            - name: Install project dependencies
-              run: npm install
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
 
-            - name: Build project
-              run: npm run build
+            - name: 🔨 Build Project
+              run: |
+                  npm cache clean --force
+                  npm install --legacy-peer-deps --force
+                  npm install env-cmd --legacy-peer-deps
+                  npm run build:preprod
 
-            - name: Deploy to FTP
-              run: ftp-deploy --host aguirreteam.projectsutd.online --user u614968815.aguirreteam --password Aguirreteam_2024 --local-dir ./build
+            - name: List output files
+              run: find build/ -print
+
+            - name: 📂 Sync files
+              uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+              with:
+                  server: aguirreteam.projectsutd.online
+                  username: u614968815.aguirreteam
+                  password: Aguirreteam_2024
+                  local-dir: build/
