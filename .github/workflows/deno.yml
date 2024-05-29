@@ -29,7 +29,6 @@ jobs:
               run: |
                   npm cache clean --force
                   npm install --legacy-peer-deps --force
-                  npm install env-cmd --legacy-peer-deps
                   npm run build
 
             - name: List output files
