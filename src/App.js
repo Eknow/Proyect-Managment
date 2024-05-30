@@ -5,6 +5,12 @@ import { useSelector } from "react-redux";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { themeSettings } from "theme";
 import Layout from "scenes/layout";
+import Administracion from "scenes/administracion";
+import AdministracionProyectos from "scenes/administracion_proyectos";
+import Negociacion from "scenes/negociacion";
+import ProcesoAdministrativo from "scenes/proceso_administrativo";
+import Alumno from "scenes/alumno";
+
 
 function App() {
     const mode = useSelector((state) => state.global.mode);
@@ -21,6 +27,11 @@ function App() {
                                 element={<Navigate to="/dashboard" replace />}
                             />
                             <Route path="/dashboard" />
+                            <Route path="/administración" element={<Administracion />}/>
+                            <Route path="/administración de proyectos" element={<AdministracionProyectos />}/>
+                            <Route path="/negociación" element={<Negociacion />}/>
+                            <Route path="/proceso administrativo" element={<ProcesoAdministrativo />}/>
+                            <Route path="/datos alumnos" element={<Alumno/>}/>
                             {/* <Route path="/products" element={<Products />} />
                             <Route path="/customers" element={<Customers />} />
                             <Route
