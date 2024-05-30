@@ -17,6 +17,8 @@ import Manipulacion from "scenes/manipulacion";
 import Eficacia from "scenes/eficacia";
 import Eficiencia from "scenes/eficiencia";
 import Profile from "scenes/perfil";
+import Riesgos from "scenes/riesgos";
+import Riesgos_def from "scenes/riesgos_definiciones";
 
 function App() {
     const mode = useSelector((state) => state.global.mode);
@@ -67,6 +69,14 @@ function App() {
                             <Route
                                 path="/eficiencia"
                                 element={<Eficiencia />}
+                            />
+                            <Route
+                                path="/riesgos"
+                                element= {<Riesgos/>}
+                            />
+                             <Route
+                                path="/definiciones de riesgos en proyecto(al menos dos"
+                                element= {<Riesgos_def/>}
                             />
                             {/* <Route path="/products" element={<Products />} />
                             <Route path="/customers" element={<Customers />} />
