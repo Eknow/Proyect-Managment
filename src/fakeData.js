@@ -1,24 +1,29 @@
+import CurriAngel from "assets/CV_ANGEL_MEZA.pdf";
+
 const users = [
     {
         id: 1,
-        name: "John Doe",
-        email: "john@example.com",
+        name: "Renteria Meza Angel Eduardo",
+        email: "Renteria@example.com",
         password: "password123",
         imageUrl: "https://randomuser.me/api/portraits/men/1.jpg",
+        curriculumUrl: CurriAngel,
     },
     {
         id: 2,
-        name: "Jane Smith",
-        email: "jane@example.com",
+        name: "Rodriguez Cuellar Ehiran Evenezer",
+        email: "Rodriguez@example.com",
         password: "password123",
-        imageUrl: "https://randomuser.me/api/portraits/women/2.jpg",
+        imageUrl: "https://randomuser.me/api/portraits/men/2.jpg",
+        curriculumUrl: "m/assets/CV_RODRIGUEZ_CUELLAR.pdf",
     },
     {
         id: 3,
-        name: "Sam Wilson",
-        email: "sam@example.com",
+        name: "Aguirre Vazquez Cristopher",
+        email: "Aguirre@example.com",
         password: "password123",
         imageUrl: "https://randomuser.me/api/portraits/men/3.jpg",
+        curriculumUrl: "/assets/CV_AGUIRRE_VAZQUEZ.pdf",
     },
 ];
 

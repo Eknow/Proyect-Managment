@@ -27,7 +27,7 @@ import {
     AdminPanelSettingsOutlined,
     TrendingUpOutlined,
     PieChartOutlined,
-    Person
+    Person,
 } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -88,15 +88,6 @@ const navItems = [
         text: "modelo de creación propia",
         icon: <AdminPanelSettingsOutlined />,
     },
-    {
-        text: "Alumnos",
-        icon: null
-    }
-    ,
-    {
-        text: "Datos Alumnos",
-        icon: <Person />
-    }
 ];
 
 const Sidebar = ({

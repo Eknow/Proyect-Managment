@@ -66,11 +66,11 @@ const Login = () => {
         <Alert severity="success">
             FOR TESTING PURPOSES USE
             <br />
-            Email: john@example.com, Password: password123
+            Email: Renteria@example.com, Password: password123
             <br />
-            Email: jane@example.com, Password: password123
+            Email: Rodriguez@example.com, Password: password123
             <br />
-            Email: sam@example.com, Password: password123
+            Email: Aguirre@example.com, Password: password123
         </Alert>
     );
 

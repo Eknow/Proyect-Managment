@@ -41,8 +41,14 @@ const Navbar = ({ isSidebarOpen, setIsSidebarOpen, user }) => {
         navigate("/");
     };
 
+    const handleShowPorfile = () => {
+        navigate(`/profile/${userObj.id}`);
+    };
+
     const users = localStorage.getItem("DashBoardUser");
     console.log(users);
+    const userObj = JSON.parse(users);
+
     return (
         <AppBar
             sx={{
@@ -81,7 +87,10 @@ const Navbar = ({ isSidebarOpen, setIsSidebarOpen, user }) => {
                         )}
                     </IconButton>
                     <IconButton>
-                        <SettingsOutlined sx={{ fontSize: "25px" }} />
+                        <SettingsOutlined
+                            sx={{ fontSize: "25px" }}
+                            onClick={handleShowPorfile}
+                        />
                     </IconButton>
                     <FlexBetween>
                         <Button
@@ -96,7 +105,7 @@ const Navbar = ({ isSidebarOpen, setIsSidebarOpen, user }) => {
                             <Box
                                 component="img"
                                 alt="profile"
-                                // src={profileImage}
+                                src={userObj.imageUrl}
                                 height="32px"
                                 width="32px"
                                 borderRadius="50%"
@@ -109,14 +118,14 @@ const Navbar = ({ isSidebarOpen, setIsSidebarOpen, user }) => {
                                     sx={{
                                         color: theme.palette.secondary[100],
                                     }}>
-                                    {/* {user.name} */}
+                                    {userObj.name}
                                 </Typography>
                                 <Typography
                                     fontSize="0.75rem"
                                     sx={{
                                         color: theme.palette.secondary[200],
                                     }}>
-                                    {/* {user.occupation} */}
+                                    {userObj.email}
                                 </Typography>
                             </Box>
                             <ArrowDropDownOutlined

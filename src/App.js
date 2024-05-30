@@ -13,10 +13,10 @@ import Administracion from "scenes/administracion";
 import AdministracionProyectos from "scenes/administracion_proyectos";
 import Negociacion from "scenes/negociacion";
 import ProcesoAdministrativo from "scenes/proceso_administrativo";
-import Alumno from "scenes/alumno";
 import Manipulacion from "scenes/manipulacion";
 import Eficacia from "scenes/eficacia";
 import Eficiencia from "scenes/eficiencia";
+import Profile from "scenes/perfil";
 
 function App() {
     const mode = useSelector((state) => state.global.mode);
@@ -68,7 +68,6 @@ function App() {
                                 path="/eficiencia"
                                 element={<Eficiencia />}
                             />
-                            <Route path="/datos alumnos" element={<Alumno />} />
                             {/* <Route path="/products" element={<Products />} />
                             <Route path="/customers" element={<Customers />} />
                             <Route
@@ -85,7 +84,10 @@ function App() {
                                 path="/performance"
                                 element={<Performance />}
                             /> */}
-                            <Route path="/profile/:id" />{" "}
+                            <Route
+                                path="/profile/:userId"
+                                element={<Profile />}
+                            />{" "}
                             {/* Añadimos la ruta del perfil */}
                         </Route>
                     </Routes>
