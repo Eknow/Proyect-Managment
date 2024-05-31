@@ -19,6 +19,7 @@ import Eficiencia from "scenes/eficiencia";
 import Profile from "scenes/perfil";
 import Riesgos from "scenes/riesgos";
 import Riesgos_def from "scenes/riesgos_definiciones";
+import Modelo from "scenes/modelo_creacion";
 
 function App() {
     const mode = useSelector((state) => state.global.mode);
@@ -74,9 +75,13 @@ function App() {
                                 path="/riesgos"
                                 element= {<Riesgos/>}
                             />
-                             <Route
+                            <Route
                                 path="/definiciones de riesgos en proyecto(al menos dos"
                                 element= {<Riesgos_def/>}
+                            />
+                            <Route
+                                path="/modelo de creación propia"
+                                element= {<Modelo/>}
                             />
                             {/* <Route path="/products" element={<Products />} />
                             <Route path="/customers" element={<Customers />} />
