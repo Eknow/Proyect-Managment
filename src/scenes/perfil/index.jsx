@@ -40,7 +40,7 @@ const Profile = () => {
                         Currículum
                     </Typography>
 
-                    <Link href={users.curriculumUrl} dowload>
+                    <Link href={users.curriculumUrl} download>
                         <Button
                             variant="contained"
                             color="primary"
