@@ -1,4 +1,9 @@
 import CurriAngel from "assets/CV_ANGEL_MEZA.pdf";
+import Angelimg from "assets/profile_renteria.jpeg";
+import Crissimg from "assets/profile_criss.jpeg";
+import CurriCriss from "assets/CV_CRISS.pdf";
+import EhiranImg from "assets/profile_rodriguez.jpg";
+import CurriEhiran from "assets/CV_EHIRAN.pdf";
 
 const users = [
     {
@@ -6,7 +11,7 @@ const users = [
         name: "Renteria Meza Angel Eduardo",
         email: "Renteria@example.com",
         password: "password123",
-        imageUrl: "https://randomuser.me/api/portraits/men/1.jpg",
+        imageUrl: Angelimg,
         curriculumUrl: CurriAngel,
     },
     {
@@ -14,16 +19,16 @@ const users = [
         name: "Rodriguez Cuellar Ehiran Evenezer",
         email: "Rodriguez@example.com",
         password: "password123",
-        imageUrl: "https://randomuser.me/api/portraits/men/2.jpg",
-        curriculumUrl: "m/assets/CV_RODRIGUEZ_CUELLAR.pdf",
+        imageUrl: EhiranImg,
+        curriculumUrl: CurriEhiran,
     },
     {
         id: 3,
         name: "Aguirre Vazquez Cristopher",
         email: "Aguirre@example.com",
         password: "password123",
-        imageUrl: "https://randomuser.me/api/portraits/men/3.jpg",
-        curriculumUrl: "/assets/CV_AGUIRRE_VAZQUEZ.pdf",
+        imageUrl: Crissimg,
+        curriculumUrl: CurriCriss,
     },
 ];
 

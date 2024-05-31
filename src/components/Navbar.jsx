@@ -24,6 +24,7 @@ import {
     MenuItem,
     useMediaQuery,
 } from "@mui/material";
+import AssignmentIndOutlinedIcon from "@mui/icons-material/AssignmentIndOutlined";
 
 const Navbar = ({ isSidebarOpen, setIsSidebarOpen, user }) => {
     const dispatch = useDispatch();
@@ -87,7 +88,7 @@ const Navbar = ({ isSidebarOpen, setIsSidebarOpen, user }) => {
                         )}
                     </IconButton>
                     <IconButton>
-                        <SettingsOutlined
+                        <AssignmentIndOutlinedIcon
                             sx={{ fontSize: "25px" }}
                             onClick={handleShowPorfile}
                         />
