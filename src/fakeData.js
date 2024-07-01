@@ -30,6 +30,14 @@ const users = [
         imageUrl: Crissimg,
         curriculumUrl: CurriCriss,
     },
+    {
+        id: 4,
+        name: "Reyes Lara",
+        email: "ingreyeslara@example.com",
+        password: "utd_2024",
+        imageUrl: "",
+        curriculumUrl: "",
+    },
 ];
 
 export default users;

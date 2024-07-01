@@ -10,7 +10,7 @@ function Dashboard() {
             alignItems="center"
             height="100%">
             <Typography variant="h4" align="center">
-                EXAMEN PARCIAL I ADMINISTRACIÓN DE PROYECTOS
+                PARCIAL 2 ADMINISTRACIÓN DE PROYECTOS
             </Typography>
         </Box>
     );

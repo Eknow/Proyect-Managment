@@ -63,15 +63,7 @@ const Login = () => {
         );
 
     const DisplayCredentials = () => (
-        <Alert severity="success">
-            FOR TESTING PURPOSES USE
-            <br />
-            Email: Renteria@example.com, Password: password123
-            <br />
-            Email: Rodriguez@example.com, Password: password123
-            <br />
-            Email: Aguirre@example.com, Password: password123
-        </Alert>
+        <Alert severity="success">FOR TESTING PURPOSES USE </Alert>
     );
 
     const theme = useTheme();
