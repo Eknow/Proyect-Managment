@@ -20,6 +20,8 @@ import Profile from "scenes/perfil";
 import Riesgos from "scenes/riesgos";
 import Riesgos_def from "scenes/riesgos_definiciones";
 import Modelo from "scenes/modelo_creacion";
+import CalculadoraROI from "scenes/rio";
+import CalculadoraEfectividadEmpresarial from "scenes/efectividad_empresarial";
 
 function App() {
     const mode = useSelector((state) => state.global.mode);
@@ -83,6 +85,15 @@ function App() {
                                 path="/modelo de creación propia"
                                 element= {<Modelo/>}
                             />
+                            <Route
+                                path="/Calculadora_RIO"
+                                element= {<CalculadoraROI/>}
+                            />
+                             <Route
+                                path="/Calculadora_efectividad_empresarial"
+                                element= {<CalculadoraEfectividadEmpresarial/>}
+                            />
+
                             {/* <Route path="/products" element={<Products />} />
                             <Route path="/customers" element={<Customers />} />
                             <Route

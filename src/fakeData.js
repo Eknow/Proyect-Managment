@@ -38,6 +38,14 @@ const users = [
         imageUrl: "",
         curriculumUrl: "",
     },
+    {
+        id: 5,
+        name: "Reyes Lara",
+        email: "examen_parcial2",
+        password: "Voyporel100",
+        imageUrl: "",
+        curriculumUrl: "",
+    },
 ];
 
 export default users;

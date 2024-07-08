@@ -87,6 +87,14 @@ const navItems = [
         text: "modelo de creación propia",
         icon: <AdminPanelSettingsOutlined />,
     },
+    {
+        text: "Calculadora_RIO",
+        icon: <AdminPanelSettingsOutlined />,
+    },
+    {
+        text: "Calculadora_efectividad_empresarial",
+        icon: <AdminPanelSettingsOutlined />,
+    },
 ];
 
 const Sidebar = ({
