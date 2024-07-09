@@ -95,6 +95,10 @@ const navItems = [
         text: "Calculadora_efectividad_empresarial",
         icon: <AdminPanelSettingsOutlined />,
     },
+    {
+        text: "calculadora_efectividad_cotidiana",
+        icon: <AdminPanelSettingsOutlined />
+    }
 ];
 
 const Sidebar = ({
