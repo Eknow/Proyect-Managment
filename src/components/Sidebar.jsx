@@ -88,6 +88,10 @@ const navItems = [
         icon: <AdminPanelSettingsOutlined />,
     },
     {
+        text: "Calculadoras",
+        icon: null,
+    },
+    {
         text: "Calculadora_RIO",
         icon: <AdminPanelSettingsOutlined />,
     },
@@ -96,9 +100,13 @@ const navItems = [
         icon: <AdminPanelSettingsOutlined />,
     },
     {
+        text: "efectividad_eficiencia_eficacia",
+        icon: <AdminPanelSettingsOutlined />,
+    },
+    {
         text: "calculadora_efectividad_cotidiana",
-        icon: <AdminPanelSettingsOutlined />
-    }
+        icon: <AdminPanelSettingsOutlined />,
+    },
 ];
 
 const Sidebar = ({

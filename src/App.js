@@ -23,6 +23,7 @@ import Modelo from "scenes/modelo_creacion";
 import CalculadoraROI from "scenes/rio";
 import CalculadoraEfectividadEmpresarial from "scenes/efectividad_empresarial";
 import CalculadoraEfectividad from "scenes/efectividad_cotidiana";
+import EffectivenessCalculator from "scenes/EffectivenessCalculator";
 
 function App() {
     const mode = useSelector((state) => state.global.mode);
@@ -74,31 +75,31 @@ function App() {
                                 path="/eficiencia"
                                 element={<Eficiencia />}
                             />
-                            <Route
-                                path="/riesgos"
-                                element= {<Riesgos/>}
-                            />
+                            <Route path="/riesgos" element={<Riesgos />} />
                             <Route
                                 path="/definiciones de riesgos en proyecto(al menos dos"
-                                element= {<Riesgos_def/>}
+                                element={<Riesgos_def />}
                             />
                             <Route
                                 path="/modelo de creación propia"
-                                element= {<Modelo/>}
+                                element={<Modelo />}
                             />
                             <Route
                                 path="/Calculadora_RIO"
-                                element= {<CalculadoraROI/>}
+                                element={<CalculadoraROI />}
                             />
-                             <Route
+                            <Route
                                 path="/Calculadora_efectividad_empresarial"
-                                element= {<CalculadoraEfectividadEmpresarial/>}
+                                element={<CalculadoraEfectividadEmpresarial />}
                             />
                             <Route
                                 path="/calculadora_efectividad_cotidiana"
-                                element= {<CalculadoraEfectividad/>}
+                                element={<CalculadoraEfectividad />}
                             />
-
+                            <Route
+                                path="/efectividad_eficiencia_eficacia"
+                                element={<EffectivenessCalculator />}
+                            />
                             {/* <Route path="/products" element={<Products />} />
                             <Route path="/customers" element={<Customers />} />
                             <Route
